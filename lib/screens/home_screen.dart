@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:shopping_list/models/grocery_item.dart';
 import 'package:shopping_list/screens/newitem_screen.dart';
 
@@ -14,7 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<GroceryItem> _addeditems = [];
   void addItems() async {
     final newItem = await Navigator.of(context).push<GroceryItem>(
-        MaterialPageRoute(builder: (ctx) => NewItemsScreen()));
+        MaterialPageRoute(builder: (ctx) => const NewItemsScreen()));
     if (newItem == null) {
       return;
     }
